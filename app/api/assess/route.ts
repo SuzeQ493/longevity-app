@@ -103,6 +103,8 @@ Generate a structured JSON report with the following exact schema:
 Return ONLY valid JSON. No markdown, no explanation, no code fences.`;
 }
 
+export const maxDuration = 300;
+
 export async function POST(req: NextRequest) {
   try {
     const data: AssessmentData = await req.json();

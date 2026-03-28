@@ -55,11 +55,24 @@ export default function Home() {
           </div>
         </div>
 
+        {isLoading ? (
+          <div className="bg-white rounded-2xl shadow-sm border border-zinc-100 p-12 text-center">
+            <div className="flex flex-col items-center gap-4">
+              <div className="w-12 h-12 rounded-full border-4 border-emerald-100 border-t-emerald-500 animate-spin" />
+              <h2 className="text-lg font-semibold text-zinc-900">Building your plan…</h2>
+              <p className="text-sm text-zinc-500 max-w-xs leading-relaxed">
+                Your AI longevity report is being generated. This takes up to 60 seconds — please don't close this tab.
+              </p>
+            </div>
+          </div>
+        ) : (
         <div className="bg-white rounded-2xl shadow-sm border border-zinc-100 p-8 md:p-12">
           <AssessmentForm onSubmit={handleSubmit} isLoading={isLoading} />
           {error && (
             <p className="mt-4 text-center text-sm text-red-500">{error}</p>
           )}
+        </div>
+        )}
         </div>
       </div>
     </main>
