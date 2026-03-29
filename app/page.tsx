@@ -44,7 +44,7 @@ export default function Home() {
       if (!res.ok) throw new Error("Failed to generate report");
       const result = await res.json();
       localStorage.setItem("longevity_report", JSON.stringify(result));
-      router.push("/pay");
+      router.push("/results");
     } catch {
       setError("Something went wrong. Please try again.");
       setIsLoading(false);
