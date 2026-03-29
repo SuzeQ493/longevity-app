@@ -322,6 +322,26 @@ export default function ResultsPage() {
           <p className="text-lg leading-relaxed font-medium">{report.closingMessage}</p>
         </div>
 
+        {/* Peptide CTA */}
+        <div className="bg-zinc-900 rounded-2xl p-8 text-center text-white">
+          <div className="inline-flex items-center gap-2 bg-violet-500/20 border border-violet-400/30 rounded-full px-4 py-1.5 mb-5">
+            <span className="w-2 h-2 rounded-full bg-violet-400" />
+            <span className="text-xs font-semibold text-violet-300 uppercase tracking-wider">Next Step</span>
+          </div>
+          <h2 className="text-2xl font-bold mb-3">Get your personalised peptide protocol</h2>
+          <p className="text-zinc-400 leading-relaxed max-w-md mx-auto mb-6">
+            Based on your longevity results, discover the exact peptide stack designed for your goals — with products you can order directly.
+          </p>
+          <a
+            href="/peptide"
+            className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-semibold px-8 py-4 rounded-xl text-sm transition-all shadow-lg shadow-violet-900/30"
+          >
+            Take the peptide assessment
+            <span className="text-lg">→</span>
+          </a>
+          <p className="mt-4 text-xs text-zinc-500">Free · 5 minutes · AI-powered recommendations</p>
+        </div>
+
         <p className="text-center text-xs text-zinc-400 pb-8">
           This report is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before making changes to your health regimen.
         </p>
